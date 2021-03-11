@@ -64,7 +64,7 @@ class Login extends React.PureComponent {
         : <ErrorMessage error={errors.password}></ErrorMessage>);
 
     return (
-      <form action="" onSubmit={(event) => this.logon(event)}>
+      <form action="" className="oc-login-form" onSubmit={(event) => this.logon(event)}>
         <TextInput
           autoFocus
           autoCapitalize="off"
@@ -73,6 +73,8 @@ class Login extends React.PureComponent {
           onChange={this.handleChange('username')}
           autoComplete="kopano-account username"
           placeholder={({ id: "konnect.login.usernameField.label", defaultMessage: "Username" })}
+          label={({ id: "konnect.login.usernameField.label", defaultMessage: "Username" })}
+          id="oc-login-username"
         />
         <TextInput
           type="password"
@@ -80,6 +82,8 @@ class Login extends React.PureComponent {
           onChange={this.handleChange('password')}
           autoComplete="kopano-account current-password"
           placeholder={({ id: "konnect.login.usernameField.label", defaultMessage: "Password" })}
+          label={({ id: "konnect.login.usernameField.label", defaultMessage: "Password" })}
+          id="oc-login-password"
         />
         {hasError && <Typography variant="subtitle2" color="error" className={classes.message}>{errorMessage}</Typography>}
         <div className={classes.wrapper}>

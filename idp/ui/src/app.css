@@ -53,6 +53,12 @@ strong {
   font-size: 1rem;
 }
 
+.oc-label {
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 .oc-input:focus {
   outline: none;
   border: 1px solid #fff;
@@ -111,4 +117,8 @@ strong {
 
 .oc-light {
   color: #fff !important;
+}
+
+.oc-login-form div:first-of-type {
+  margin-bottom: 15px;
 }
